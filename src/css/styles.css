@@ -1,13 +1,12 @@
-/* General Styles */
 body {
-    background: linear-gradient(135deg, #007bff, #87CEEB); /* Gradient from dark blue to light blue */
-    background-size: 200% 200%; /* For gradient animation */
-    color: #ffffff; /* White text */
+    background: linear-gradient(135deg, #007bff, #87CEEB);
+    background-size: 200% 200%;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Ensure gradient covers the full viewport height */
-    animation: gradientShift 10s ease infinite; /* Animated gradient background */
+    min-height: 100vh;
+    animation: gradientShift 10s ease infinite;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, label, li {
@@ -15,66 +14,65 @@ h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, label, li {
 }
 
 h1, h2 {
-    color: #ffffff; /* White heading */
+    color: #ffffff;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    overflow: hidden; /* Hide overflow for typewriter effect */
-    white-space: nowrap; /* Keep text on one line */
-    animation: typewriter 2s steps(40, end), fadeIn 1.5s ease-in-out; /* Typewriter and fade-in */
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 2s steps(40, end), fadeIn 1.5s ease-in-out;
 }
 
 p {
-    color: #ffffff; /* White text */
+    color: #ffffff;
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 10px 0;
-    animation: fadeInText 1.5s ease-in-out 0.5s; /* Fade in with delay */
+    animation: fadeInText 1.5s ease-in-out 0.5s;
 }
 
 button {
-    background-color: #000000; /* Black button */
-    color: #ffffff; /* White text */
+    background-color: #000000;
+    color: #ffffff;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    animation: pulse 2s infinite; /* Pulse animation */
+    animation: pulse 2s infinite;
 }
 
 button:hover {
-    background-color: #333333; /* Darker black on hover */
+    background-color: #333333;
     transform: scale(1.05);
-    animation: none; /* Stop pulse animation on hover */
+    animation: none;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: calc(100% - 20px); /* Adjust width to account for padding */
+    width: calc(100% - 20px);
     padding: 10px;
-    margin: 10px 0; /* Add margin for spacing */
-    border: 1px solid #ffffff; /* White border */
+    margin: 10px 0;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInSlideUp 1s ease-in-out; /* Fade in and slide up */
+    animation: fadeInSlideUp 1s ease-in-out;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-    border-color: #007bff; /* Blue border on focus */
+    border-color: #007bff;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
 textarea {
-    resize: vertical; /* Allow vertical resizing */
-    min-height: 150px; /* Larger initial height */
+    resize: vertical;
+    min-height: 150px;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -244,10 +242,9 @@ textarea {
     }
 }
 
-/* Contact Section */
 .contact {
     max-width: 600px;
-    margin: 80px auto 20px; /* Adjusted for fixed navbar */
+    margin: 80px auto 20px;
     padding: 20px;
     text-align: center;
 }
@@ -260,19 +257,19 @@ textarea {
 }
 
 .socials button {
-    background-color: #ffffff; /* White button background */
+    background-color: #ffffff;
     border: none;
-    border-radius: 50%; /* Circular buttons */
+    border-radius: 50%;
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .socials button:hover {
-    background-color: #f0f0f0; /* Light grey on hover */
+    background-color: #f0f0f0;
     transform: scale(1.1);
-    animation: bounce 0.5s; /* Bounce animation on hover */
+    animation: bounce 0.5s;
 }
 
 .socials img {
@@ -281,29 +278,26 @@ textarea {
 }
 
 .socials button img[alt="GitHub"] {
-    filter: brightness(0.8); /* Slightly darken the GitHub logo */
+    filter: brightness(0.8);
 }
 
-/* Home Section */
 .home {
     text-align: center;
-    padding: 100px 20px 20px; /* Adjusted for fixed navbar */
+    padding: 100px 20px 20px;
     max-width: 800px;
     margin: 20px auto;
 }
 
-/* Search Section */
 .search {
     padding: 20px;
     max-width: 600px;
-    margin: 80px auto 20px; /* Adjusted for fixed navbar */
-    color: #000000; /* Black text for the entire search section */
+    margin: 80px auto 20px;
+    color: #000000;
 }
 
-/* Search Button */
 .search button {
-    color: #ffffff; /* White text for the search button */
-    background-color: #000000; /* Black background for the search button */
+    color: #ffffff;
+    background-color: #000000;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -313,38 +307,36 @@ textarea {
 }
 
 .search button:hover {
-    background-color: #333333; /* Darker black on hover */
+    background-color: #333333;
     transform: scale(1.05);
 }
 
-/* Dropdown Styles */
 .dropdown {
-    background-color: #ffffff; /* White dropdown background */
-    border: 1px solid #000000; /* Black border */
+    background-color: #ffffff;
+    border: 1px solid #000000;
     border-radius: 4px;
     max-height: 200px;
     overflow-y: auto;
-    animation: fadeInSlideDown 0.3s ease-in-out; /* Slide down animation */
-    color: #000000; /* Black text for dropdown */
+    animation: fadeInSlideDown 0.3s ease-in-out;
+    color: #000000;
 }
 
 .dropdown * {
-    color: #000000; /* Force black text for all elements inside dropdown */
+    color: #000000;
 }
 
 .dropdown div {
     padding: 10px;
     cursor: pointer;
-    border-bottom: 1px solid #000000; /* Black border */
+    border-bottom: 1px solid #000000;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .dropdown div:hover {
-    background-color: #f0f0f0; /* Light grey on hover */
-    transform: scale(1.05); /* Scale up on hover */
+    background-color: #f0f0f0;
+    transform: scale(1.05);
 }
 
-/* Form Section */
 form {
     padding: 20px;
     max-width: 500px;
@@ -355,8 +347,8 @@ label {
     display: block;
     margin-bottom: 15px;
     font-weight: bold;
-    color: #ffffff; /* White text */
-    animation: fadeInSlideUp 1s ease-in-out; /* Fade in and slide up */
+    color: #ffffff;
+    animation: fadeInSlideUp 1s ease-in-out;
 }
 
 button.clear-storage {
@@ -368,7 +360,6 @@ button.clear-storage:hover {
     background-color: #c82333;
 }
 
-/* View Section */
 .view-container {
     display: flex;
     height: 100vh;
@@ -376,12 +367,12 @@ button.clear-storage:hover {
 
 .view-container,
 .view-container * {
-    color: #000000; /* Force black text for all elements inside .view-container */
+    color: #000000;
 }
 
 .sessions-list {
-    flex: 1; /* Takes up 50% of the screen */
-    overflow-y: auto; /* Enable scrolling if content overflows */
+    flex: 1;
+    overflow-y: auto;
     padding: 16px;
 }
 
@@ -399,68 +390,67 @@ button.clear-storage:hover {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
-    animation: fadeInScale 1s ease-in-out; /* Fade in and scale up */
+    animation: fadeInScale 1s ease-in-out;
 }
 
 .session-card h3 {
     margin-top: 0;
-    color: #000000; /* Black text for headings */
+    color: #000000;
 }
 
 .session-card p,
 .session-card div {
-    color: #000000; /* Black text for paragraphs and other content */
+    color: #000000;
 }
 
 .session-card button {
     margin-top: 8px;
     padding: 8px 16px;
     background-color: #007bff;
-    color: white; /* White text for buttons */
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .session-card button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
-/* Navbar Icons */
 .navbar-icons {
     list-style: none;
     display: flex;
-    justify-content: space-between; /* Distribute items evenly */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     padding: 0;
-    width: 100%; /* Ensure it spans the full width */
+    width: 100%;
 }
 
 .navbar-icons li {
     margin: 0;
-    flex: 1; /* Each li takes equal space */
-    text-align: center; /* Center the content */
-    animation: fadeInSlideRight 1s ease-in-out; /* Fade in and slide from right */
+    flex: 1;
+    text-align: center;
+    animation: fadeInSlideRight 1s ease-in-out;
 }
 
 .navbar-icons a {
-    color: #ffffff; /* White text */
+    color: #ffffff;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Center content vertically */
+    justify-content: center;
     transition: color 0.3s ease, background-color 0.3s ease;
-    background-color: transparent; /* Transparent background */
-    padding: 15px 0; /* Add vertical padding for better clickability */
-    width: 100%; /* Ensure the link covers the full width of the li */
-    border-radius: 0; /* Remove rounded corners for seamless look */
+    background-color: transparent;
+    padding: 15px 0;
+    width: 100%;
+    border-radius: 0;
 }
 
 .navbar-icons a:hover {
-    color: #007bff; /* Blue on hover */
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
+    color: #007bff;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .icon {
@@ -469,41 +459,39 @@ button.clear-storage:hover {
 }
 
 .navbar-icons a:hover .icon {
-    animation: rotate 1s linear infinite; /* Rotate icon on hover */
+    animation: rotate 1s linear infinite;
 }
 
-/* Main Content Styles */
 .main-content {
-    padding-top: 80px; /* Add padding to avoid content being hidden behind the fixed navbar */
+    padding-top: 80px;
 }
 
-/* Text-Specific Animations */
 a {
-    color: #ffffff; /* White text */
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:hover {
-    color: #007bff; /* Blue on hover */
-    text-shadow: 0 0 8px rgba(0, 123, 255, 0.8); /* Glow effect */
+    color: #007bff;
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
 }
 
 li {
-    animation: bounceIn 1s ease-in-out; /* Bounce effect for list items */
+    animation: bounceIn 1s ease-in-out;
 }
 
 .highlight {
-    color: #ffcc00; /* Yellow text */
+    color: #ffcc00;
     font-weight: bold;
-    animation: highlightPulse 2s infinite; /* Highlight pulse effect */
+    animation: highlightPulse 2s infinite;
 }
 
 blockquote {
     border-left: 4px solid #007bff;
     padding-left: 15px;
     color: #ffffff;
-    animation: fadeInSlideRight 1s ease-in-out; /* Slide in from right */
+    animation: fadeInSlideRight 1s ease-in-out;
 }
 
 button.text-button {
@@ -516,7 +504,7 @@ button.text-button {
 }
 
 button.text-button:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 code {
@@ -524,5 +512,5 @@ code {
     padding: 5px 10px;
     border-radius: 4px;
     font-family: monospace;
-    animation: fadeInScale 1s ease-in-out; /* Fade in and scale */
+    animation: fadeInScale 1s ease-in-out;
 }
