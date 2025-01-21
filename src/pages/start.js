@@ -57,7 +57,7 @@ const Start = () => {
           try {
             if (isEditing) {
               // Send PUT request to update session
-              const response = await fetch(`http://localhost:8080/api/class-data/${editSession.id}`, {
+              const response = await fetch(`${process.env.REACT_APP_API_URL}/api/class-data/${editSession.id}`, {
                 method: 'PUT',
                 headers: {
                   'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const Start = () => {
               localStorage.removeItem('formData');
             } else {
               // Send POST request to create new session
-              const response = await fetch('http://localhost:8080/api/class-data', {
+              const response = await fetch(`${process.env.REACT_APP_API_URL}/api/class-data`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -169,7 +169,7 @@ const Start = () => {
         throw new Error('No session selected for deletion or session ID is missing');
       }
 
-      const response = await fetch(`http://localhost:8080/api/class-data/${session.id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/class-data/${session.id}`, {
         method: 'DELETE',
       });
 

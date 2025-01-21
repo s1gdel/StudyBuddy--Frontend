@@ -10,7 +10,7 @@ function Search() {
 
   // Fetch all study sessions when the component mounts
   useEffect(() => {
-    fetch('http://localhost:8080/api/class-data')
+    fetch(`${process.env.REACT_APP_API_URL}/api/class-data`)
       .then((response) => response.json())
       .then((data) => {
         setAllSessions(data);

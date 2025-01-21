@@ -11,7 +11,7 @@ function Home() {
 
   return (
     <div className="home">
-      <h1>Welcome to UTD Study Buddy!</h1>
+      <h1>Welcome to Study Buddy!</h1>
       <p>Find people to study with ease!</p>
       <p>Just search for a group</p>
       <p>or create your own</p>
