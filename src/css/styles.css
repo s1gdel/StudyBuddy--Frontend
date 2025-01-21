@@ -1,0 +1,528 @@
+/* General Styles */
+body {
+    background: linear-gradient(135deg, #007bff, #87CEEB); /* Gradient from dark blue to light blue */
+    background-size: 200% 200%; /* For gradient animation */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure gradient covers the full viewport height */
+    animation: gradientShift 10s ease infinite; /* Animated gradient background */
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, label, li {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1, h2 {
+    color: #ffffff; /* White heading */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide overflow for typewriter effect */
+    white-space: nowrap; /* Keep text on one line */
+    animation: typewriter 2s steps(40, end), fadeIn 1.5s ease-in-out; /* Typewriter and fade-in */
+}
+
+p {
+    color: #ffffff; /* White text */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    animation: fadeInText 1.5s ease-in-out 0.5s; /* Fade in with delay */
+}
+
+button {
+    background-color: #000000; /* Black button */
+    color: #ffffff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: pulse 2s infinite; /* Pulse animation */
+}
+
+button:hover {
+    background-color: #333333; /* Darker black on hover */
+    transform: scale(1.05);
+    animation: none; /* Stop pulse animation on hover */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin: 10px 0; /* Add margin for spacing */
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInSlideUp 1s ease-in-out; /* Fade in and slide up */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 150px; /* Larger initial height */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes highlightPulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Contact Section */
+.contact {
+    max-width: 600px;
+    margin: 80px auto 20px; /* Adjusted for fixed navbar */
+    padding: 20px;
+    text-align: center;
+}
+
+.socials {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials button {
+    background-color: #ffffff; /* White button background */
+    border: none;
+    border-radius: 50%; /* Circular buttons */
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.socials button:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
+    transform: scale(1.1);
+    animation: bounce 0.5s; /* Bounce animation on hover */
+}
+
+.socials img {
+    width: 30px;
+    height: 30px;
+}
+
+.socials button img[alt="GitHub"] {
+    filter: brightness(0.8); /* Slightly darken the GitHub logo */
+}
+
+/* Home Section */
+.home {
+    text-align: center;
+    padding: 100px 20px 20px; /* Adjusted for fixed navbar */
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Search Section */
+.search {
+    padding: 20px;
+    max-width: 600px;
+    margin: 80px auto 20px; /* Adjusted for fixed navbar */
+    color: #000000; /* Black text for the entire search section */
+}
+
+/* Search Button */
+.search button {
+    color: #ffffff; /* White text for the search button */
+    background-color: #000000; /* Black background for the search button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #333333; /* Darker black on hover */
+    transform: scale(1.05);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    background-color: #ffffff; /* White dropdown background */
+    border: 1px solid #000000; /* Black border */
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    animation: fadeInSlideDown 0.3s ease-in-out; /* Slide down animation */
+    color: #000000; /* Black text for dropdown */
+}
+
+.dropdown * {
+    color: #000000; /* Force black text for all elements inside dropdown */
+}
+
+.dropdown div {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #000000; /* Black border */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown div:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Form Section */
+form {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    animation: fadeInSlideUp 1s ease-in-out; /* Fade in and slide up */
+}
+
+button.clear-storage {
+    background-color: #dc3545;
+    margin-top: 20px;
+}
+
+button.clear-storage:hover {
+    background-color: #c82333;
+}
+
+/* View Section */
+.view-container {
+    display: flex;
+    height: 100vh;
+}
+
+.view-container,
+.view-container * {
+    color: #000000; /* Force black text for all elements inside .view-container */
+}
+
+.sessions-list {
+    flex: 1; /* Takes up 50% of the screen */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    padding: 16px;
+}
+
+.map-container {
+    flex: 1;
+    height: 80vh;
+    position: sticky;
+    top: 60px;
+    padding-top: 60px;
+}
+
+.session-card {
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    animation: fadeInScale 1s ease-in-out; /* Fade in and scale up */
+}
+
+.session-card h3 {
+    margin-top: 0;
+    color: #000000; /* Black text for headings */
+}
+
+.session-card p,
+.session-card div {
+    color: #000000; /* Black text for paragraphs and other content */
+}
+
+.session-card button {
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white; /* White text for buttons */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.session-card button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Navbar Icons */
+.navbar-icons {
+    list-style: none;
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure it spans the full width */
+}
+
+.navbar-icons li {
+    margin: 0;
+    flex: 1; /* Each li takes equal space */
+    text-align: center; /* Center the content */
+    animation: fadeInSlideRight 1s ease-in-out; /* Fade in and slide from right */
+}
+
+.navbar-icons a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    background-color: transparent; /* Transparent background */
+    padding: 15px 0; /* Add vertical padding for better clickability */
+    width: 100%; /* Ensure the link covers the full width of the li */
+    border-radius: 0; /* Remove rounded corners for seamless look */
+}
+
+.navbar-icons a:hover {
+    color: #007bff; /* Blue on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white on hover */
+}
+
+.icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar-icons a:hover .icon {
+    animation: rotate 1s linear infinite; /* Rotate icon on hover */
+}
+
+/* Main Content Styles */
+.main-content {
+    padding-top: 80px; /* Add padding to avoid content being hidden behind the fixed navbar */
+}
+
+/* Text-Specific Animations */
+a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #007bff; /* Blue on hover */
+    text-shadow: 0 0 8px rgba(0, 123, 255, 0.8); /* Glow effect */
+}
+
+li {
+    animation: bounceIn 1s ease-in-out; /* Bounce effect for list items */
+}
+
+.highlight {
+    color: #ffcc00; /* Yellow text */
+    font-weight: bold;
+    animation: highlightPulse 2s infinite; /* Highlight pulse effect */
+}
+
+blockquote {
+    border-left: 4px solid #007bff;
+    padding-left: 15px;
+    color: #ffffff;
+    animation: fadeInSlideRight 1s ease-in-out; /* Slide in from right */
+}
+
+button.text-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: text-shadow 0.3s ease;
+}
+
+button.text-button:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+code {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    animation: fadeInScale 1s ease-in-out; /* Fade in and scale */
+}
