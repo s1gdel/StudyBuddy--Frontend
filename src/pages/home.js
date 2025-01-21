@@ -13,7 +13,7 @@ function Home() {
     <div className="home">
       <h1>Welcome to Study Buddy!</h1>
       <p>Find people to study with ease!</p>
-      <p>Just search for a group</p>
+      <p>Just search for a session</p>
       <p>or create your own</p>
       <button onClick={getStarted}>Get started</button>
     </div>
