@@ -51,7 +51,7 @@ function Search() {
     <div className="search">
       <h1>Search</h1>
       <p>
-        Find study groups by entering the course code (e.g. CS 2336) and/or professor last name
+        Find study sessions by entering the course code (e.g. CS 2336) and/or professor last name
         separated by a comma (e.g. CS 2336, Satpute).
       </p>
       <div style={{ position: 'relative' }}>
