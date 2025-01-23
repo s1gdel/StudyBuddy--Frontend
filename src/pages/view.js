@@ -22,7 +22,7 @@ function View() {
 
                 const filteredSessions = data.filter(session => {
                     const sessionDate = new Date(session.createdAt); 
-                    console.log("Session Date:", sessionDate, "One Hour Ago:", threeHoursAgo); 
+                    console.log("Session Date:", sessionDate, "Three Hours Ago:", threeHoursAgo); 
                     return sessionDate > threeHoursAgo; 
                 });
 
