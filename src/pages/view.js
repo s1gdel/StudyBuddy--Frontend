@@ -16,14 +16,14 @@ function View() {
         fetch(`${process.env.REACT_APP_API_URL}/api/class-data`)
             .then((response) => response.json())
             .then((data) => {
-                console.log("Backend Response:", data); // Debugging
+                console.log("Backend Response:", data);
                 const nowUTC = new Date(); // Current time in UTC
-                const oneHourAgo = new Date(nowUTC.getTime() - 3* 60 * 60 * 1000); // 1 hour ago in UTC
+                const threeHoursAgo = new Date(nowUTC.getTime() - 3* 60 * 60 * 1000); 
 
                 const filteredSessions = data.filter(session => {
-                    const sessionDate = new Date(session.createdAt); // createdAt is already in UTC
-                    console.log("Session Date:", sessionDate, "One Hour Ago:", oneHourAgo); // Debugging
-                    return sessionDate > oneHourAgo; // Keep sessions created within the last hour
+                    const sessionDate = new Date(session.createdAt); 
+                    console.log("Session Date:", sessionDate, "One Hour Ago:", threeHoursAgo); 
+                    return sessionDate > threeHoursAgo; 
                 });
 
                 setStudySessions(filteredSessions); // Update state with filtered sessions
